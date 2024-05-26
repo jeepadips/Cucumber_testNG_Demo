@@ -1,0 +1,29 @@
+Configuration:
+  status: warn
+
+  appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+
+    File:
+      name: File
+      fileName: logs/app.log
+      PatternLayout:
+      Pattern: "%d %p %C{1.} [%t] %m%n"
+
+
+  Loggers:
+    logger:
+      - name: com.example
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: LogToConsole
+          - ref: File
+
+    Root:
+      level: error
+      AppenderRef:
+        ref: LogToConsole

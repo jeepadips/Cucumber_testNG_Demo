@@ -12,18 +12,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import java.time.Duration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LoginPageDefinitions {
     private static WebDriver driver;
     public final static int TIMEOUT = 5;
-
+    private static Logger logger = LogManager.getLogger();
     @Before
     public void setUp() {
-
+        logger.info("Open a Chrome Web Browser");
         ChromeOptions options = new ChromeOptions();
+        logger.info("Make the Web Browser full screen");
         options.addArguments("--start-maximized");
        // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/src/test/resources/drivers/chromedriver/exe");
         driver = new ChromeDriver(options);
+        logger.info("Wait for 10 sec");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 
     }

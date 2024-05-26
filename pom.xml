@@ -19,6 +19,8 @@
     <maven.surefire.plugin.version>3.2.3</maven.surefire.plugin.version>
     <maven.compiler.source.version>17</maven.compiler.source.version>
     <maven.compiler.target.version>17</maven.compiler.target.version>
+    <log4j.version>3.0.0-alpha1</log4j.version>
+    <jackson.version>2.16.0</jackson.version>
   </properties>
 
   <dependencies>
@@ -56,6 +58,19 @@
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- Log4j Dependency -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+    <!-- Jackson Dataformat YAML -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-yaml</artifactId>
+      <version>${jackson.version}</version>
     </dependency>
 
   </dependencies>
