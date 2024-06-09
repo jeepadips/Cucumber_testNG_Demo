@@ -15,10 +15,10 @@
     <cucumber.version>7.15.0</cucumber.version>
     <selenium.version>4.16.1</selenium.version>
     <testng.version>7.9.0</testng.version>
-    <maven.compiler.plugin.version>3.12.1</maven.compiler.plugin.version>
+    <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <maven.surefire.plugin.version>3.2.3</maven.surefire.plugin.version>
-    <maven.compiler.source.version>1.8</maven.compiler.source.version>
-    <maven.compiler.target.version>1.8</maven.compiler.target.version>
+    <maven.compiler.source.version>17</maven.compiler.source.version>
+    <maven.compiler.target.version>17</maven.compiler.target.version>
     <log4j.version>3.0.0-alpha1</log4j.version>
     <jackson.version>2.16.0</jackson.version>
   </properties>
